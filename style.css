@@ -1,0 +1,112 @@
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0; /* Light grey background */
+  color: #212121; /* Dark text for better readability */
+  transition: background-color 0.3s ease;
+}
+
+.chat-container {
+  width: 400px;
+  border: 1px solid #e0e0e0; /* Very light grey border */
+  border-radius: 12px;
+  background-color: #fff; /* White container background */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.chat-messages {
+  padding: 15px;
+  height: 400px; /* Increased height for more messages */
+  overflow-y: auto;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #eee;
+  background-color: #fafafa; /* Very light grey input area */
+  transition: background-color 0.3s ease;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #ddd; /* Light grey border for input */
+  border-radius: 24px;
+  background-color: #fff;
+  color: #212121;
+  font-size: 1em;
+  transition: border-color 0.3s ease; /* transition for border color on hover */
+}
+
+.chat-input input:focus {
+  border: 1px solid #007bff;
+  outline: none;
+}
+
+.chat-input input::placeholder {
+  color: #9e9e9e;
+}
+
+.chat-input button {
+  padding: 10px 15px;
+  margin-left: 8px;
+  background-color: #007bff; /* Android-like blue */
+  color: white;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chat-input button:hover {
+  background-color: #0056b3;
+}
+
+.user-message,
+.bot-message {
+  padding: 10px 12px;
+  border-radius: 18px;
+  margin: 8px 0;
+  max-width: 75%;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.user-message {
+  background-color: #dcf8c6; /* Light green */
+  align-self: flex-end;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.bot-message {
+  background-color: #eceff1; /* Light grey */
+  align-self: flex-start;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+/* Smooth Scrolling */
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+
+.chat-messages {
+  scroll-behavior: smooth;
+}
